@@ -8,8 +8,7 @@ I = im2double(I);
 %I  = I ./4;
 %I = imresize(I,[128,128]);
 %I=logical(I);
-%  F=jun(I,140);
-[T,F]=Reconstruction(I,8);
+F=jun(I,140);
 
 F= F./(max(max(F)));
 imwrite(F,'recon_tiffany.tif');
